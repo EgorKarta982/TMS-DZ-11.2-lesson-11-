@@ -23,6 +23,9 @@
                                 <rect key="frame" x="50" y="771" width="42" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="&lt;&lt;"/>
+                                <connections>
+                                    <action selector="leftButtonPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AUs-H0-CCd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhI-Ar-EWv">
                                 <rect key="frame" x="322" y="771" width="42" height="31"/>
