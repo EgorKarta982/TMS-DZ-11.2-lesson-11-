@@ -16,15 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basket" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-Z6-FYY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="568"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="basket" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-Z6-FYY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="571"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4X-tV-kF0">
                                 <rect key="frame" x="50" y="771" width="42" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="&lt;&lt;"/>
                                 <connections>
-                                    <action selector="leftButtonPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AUs-H0-CCd"/>
+                                    <action selector="leftButtonPresed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p6E-aR-Lcw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhI-Ar-EWv">
@@ -40,12 +41,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uhI-Ar-EWv" secondAttribute="bottom" constant="60" id="0Le-f7-am0"/>
-                            <constraint firstItem="ArP-Z6-FYY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JPu-qR-I9a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uhI-Ar-EWv" secondAttribute="trailing" constant="50" id="cpN-x6-9TR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ArP-Z6-FYY" secondAttribute="trailing" id="fW4-lg-syN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ArP-Z6-FYY" secondAttribute="bottom" constant="250" id="lNY-2F-xjm"/>
                             <constraint firstItem="w4X-tV-kF0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="mlC-Oj-vD3"/>
-                            <constraint firstItem="ArP-Z6-FYY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nk5-1c-cz2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w4X-tV-kF0" secondAttribute="bottom" constant="60" id="w2f-6J-lK8"/>
                         </constraints>
                     </view>

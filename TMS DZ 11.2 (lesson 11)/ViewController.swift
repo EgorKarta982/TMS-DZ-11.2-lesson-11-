@@ -33,38 +33,75 @@ class ViewController: UIViewController {
         }
         
         if startPosition {
-            
-            
+                        print("1 нажатие \n  first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
             let image = UIImage(named: arrayImage[countOfArray])
             self.secondImageView.image = image
+            
             UIView.animate(withDuration: 0.3) {
                 self.secondImageView.frame.origin.x = 0
-            } completion: { _ in
+            } //completion: { _ in
                 self.firstImageView.frame.origin.x = self.view.frame.width
-            }
-            print(" first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
+//            }
+
             self.startPosition = !self.startPosition
-            
+                        print(" first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
+
         }
         else {
-            
-            print(" второе нажатие \n first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
+                        print(" 2 нажатие \n first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
+
             let image = UIImage(named: arrayImage[countOfArray])
             self.firstImageView.image = image
+
             UIView.animate(withDuration: 0.3) {
                 self.firstImageView.frame.origin.x = 0
-            } completion: { _ in
+            } //completion: { _ in
                 self.secondImageView.frame.origin.x = self.view.frame.width
-            }
-            
-//            print(" first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
+//            }
             self.startPosition = !self.startPosition
+            print(" first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
+            
         }
         
         
     }
-    @IBAction func leftButtonPresed(_ sender: UIButton) {
-        print(" first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
-    }
-   
+        @IBAction func leftButtonPresed(_ sender: UIButton) {
+            print(" first \(self.firstImageView.frame), second \(self.secondImageView.frame)")
+    
+            if countOfArray == 0 {
+                countOfArray = arrayImage.count - 1
+            } else {
+                countOfArray -= 1
+            }
+    
+            if startPosition {
+                let image = UIImage(named: arrayImage[countOfArray])
+                self.secondImageView.image = image
+                self.secondImageView.frame.origin.x = 0 - self.secondImageView.frame.width
+                UIView.animate(withDuration: 0.3) {
+                    self.secondImageView.frame.origin.x = 0
+                } //completion: { _ in
+                    self.firstImageView.frame.origin.x = self.view.frame.width
+
+//                }
+                self.startPosition = !self.startPosition
+            }
+            else {
+                let image = UIImage(named: arrayImage[countOfArray])
+                self.firstImageView.image = image
+                self.firstImageView.frame.origin.x = 0 - self.firstImageView.frame.width
+                UIImageView.animate(withDuration: 0.3) {
+                    self.firstImageView.frame.origin.x = 0
+                } //completion: { _ in
+                    self.secondImageView.frame.origin.x = self.view.frame.width
+
+              //  }
+                self.startPosition = !self.startPosition
+    
+    
+            }
+    
+    
+        }
+    
 }
